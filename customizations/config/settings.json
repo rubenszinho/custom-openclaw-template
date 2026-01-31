@@ -1,0 +1,14 @@
+{
+    "request_timeout": 30,
+    "max_retries": 3,
+    "retry_delay": 1,
+    "log_level": "info",
+    "api_bridge": {
+        "default_headers": {
+            "Content-Type": "application/json",
+            "User-Agent": "OpenClaw-CustomBot/1.0"
+        },
+        "timeout": 30,
+        "verify_ssl": true
+    }
+}

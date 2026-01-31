@@ -1,0 +1,18 @@
+{
+    "agents": {
+        "defaults": {
+            "model": {
+                "primary": "anthropic/claude-opus-4-5"
+            }
+        }
+    },
+    "gateway": {
+        "mode": "local",
+        "bind": "loopback",
+        "port": 18789,
+        "trustedProxies": [
+            "127.0.0.1",
+            "::1"
+        ]
+    }
+}

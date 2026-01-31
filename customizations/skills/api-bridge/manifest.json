@@ -1,0 +1,37 @@
+{
+    "name": "api_bridge",
+    "description": "Forwards HTTP requests to an external middleware API. Use this tool to fetch data, submit information, or interact with backend services. The middleware URL and authentication are configured via environment variables.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "method": {
+                "type": "string",
+                "enum": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "PATCH"
+                ],
+                "description": "HTTP method to use for the request"
+            },
+            "endpoint": {
+                "type": "string",
+                "description": "Relative API path (e.g., '/users', '/crops/123'). Will be appended to MIDDLEWARE_URL"
+            },
+            "body": {
+                "type": "object",
+                "description": "Optional JSON body for POST, PUT, or PATCH requests"
+            },
+            "query_params": {
+                "type": "object",
+                "description": "Optional query parameters to append to the URL"
+            }
+        },
+        "required": [
+            "method",
+            "endpoint"
+        ]
+    },
+    "handler": "./handler.py"
+}

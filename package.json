@@ -1,0 +1,16 @@
+{
+    "name": "openclaw-railway-wrapper",
+    "version": "1.0.0",
+    "description": "Railway wrapper for custom OpenClaw template",
+    "main": "src/server.js",
+    "scripts": {
+        "start": "node src/server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "http-proxy-middleware": "^2.0.6"
+    },
+    "engines": {
+        "node": ">=18"
+    }
+}
